@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Video Tracker</title>
+    <title>AR Video Tracker</title>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
-    <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     <script>
         window.onload = function() {
             AFRAME.registerComponent('videohandler', {
@@ -59,7 +59,7 @@
 
     <a-assets>
         <video
-        src="https://cors-anywhere.herokuapp.com/https://raw.githack.com/Fineteklabs/nakkeiexp/master/images/video.mp4"
+        src="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/Fineteklabs/nakkeiexp/master/images/video.mp4"
                preload="auto" id="vid" response-type="arraybuffer" loop
                crossorigin webkit-playsinline autoplay muted playsinline>
         </video>

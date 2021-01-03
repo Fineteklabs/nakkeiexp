@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Nakkei Experiences</title>
+    <title>AR  Experiences</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
@@ -16,11 +16,10 @@
     </div>
     <div class="nav-links">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Education</a></li>
+<!--            <li><a href="#">Home</a></li>-->
+<!--            <li><a href="#">Education</a></li>-->
             <li><a href="#">AR Experiences</a></li>
             <li><a href="#">3D Experiences</a></li>
-            <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
 </nav>
@@ -29,35 +28,50 @@
     <img src="images/4719966.jpg" class="landing">
     <div id="circle">
         <div class="feature one">
-            <img src="images/31967.jpg">
+            <a href="html/video.html" target="_blank" rel="noopener noreferrer"> <button id="button" class="buttons one"> <img src="images/camera.png" id="test"></button></a>
             <div>
                 <h3> Communication</h3>
             <p> more insightful content </p>
+                <p><i>click to scan</i></p>
             </div>
         </div>
         <div class="feature two">
-            <img src="images/4719966.jpg">
+            <a href="html/ar.html" target="_blank" rel="noopener noreferrer"> <button id="edubutton" class="buttons one"> <img src="images/camera.png" id="edu"></button></a>
             <div>
                 <h3> Education</h3>
                 <p> better learning experience </p>
+                <p><i>click to scan</i></p>
+
             </div>
-        </div>
         </div>
         <div class="feature three">
-            <img src="images/4721495.jpg"  >
+            <a href="html/video.html" target="_blank" rel="noopener noreferrer"> <button id="lifebutton" class="buttons one"> <img src="images/camera.png" id="life"></button></a>
             <div>
-                <h3> Better Lifestyle </h3>
-                <p> from industry to practical </p>
+                <h3> Navigation  </h3>
+                <p> better mapping  </p>
+                <p><i>click to scan</i></p>
+
             </div>
         </div>
+        <div class="feature four">
+            <a href="html/video.html" target="_blank" rel="noopener noreferrer"> <button id="commerce" class="buttons one"> <img src="images/camera.png" id="com"></button></a>
+            <div>
+                <h3> Commerce & Lifestyle </h3>
+                <p> better customer experience </p>
+                <p><i>click to scan</i></p>
+            </div>
+        </div>
+        </div>
+
         </div>
         <div class="feature four"></div>
     </div>
 
 <div class="controls">
-    <h2>Click  Camera to Scan</h2>
-    <a href="html/video.html" target="_blank" rel="noopener noreferrer"> <button id="button" class="buttons one"> <img src="images/camera.png" id="test"></button>
-    </a>
+    <img src="images/arrow.png"id="upbtn">
+<!--    <a href="html/video.html" target="_blank" rel="noopener noreferrer"> <button id="button" class="buttons one"> <img src="images/camera.png" id="test"></button></a>-->
+    <h3>Features</h3>
+    <img src="images/arrow.png" id="downbtn">
 </div>
 </div>
 
@@ -65,7 +79,23 @@
 
 
 <script>
+var circle=document.getElementById("circle")
+var upbtn=document.getElementById("upbtn")
+var downbtn=document.getElementById("downbtn")
+var rotateValue= circle.style.transform
+    var rotateSum;
 
+
+upbtn.onclick=function(){
+    rotateSum=rotateValue+ "rotate(-90deg)"
+    circle.style.transform=rotateSum;
+    rotateValue=rotateSum;
+}
+downbtn.onclick=function(){
+    rotateSum=rotateValue+ "rotate(90deg)"
+    circle.style.transform=rotateSum;
+    rotateValue=rotateSum;
+}
 </script>
 </body>
 </html>
